@@ -1,0 +1,104 @@
+<html>
+ <head>
+    <link rel="stylesheet" href="style.css">
+  <title>
+  TUUURING MACHINEEEEE!!!!! (by ana, btw)
+  </title>
+  
+ </head>
+
+
+
+
+ <body>
+  <div id="Header">
+   <h1>IT's A TURNING MACHINE</h1>
+   <div id="IntroText">
+    Oki, this is a <a href="http://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> simulator! I hope you like it!<br>
+ </div>
+  </div>
+
+
+  <div id="Machine">
+   <div id="MachineTapeContainer">
+    <div class="BoxTitle">Tape</div>
+    <div id="MachineTape" class="MachineStatusBox" title="This is the Turing machine's tapeeee! The head position is indicated by the highlighted cell and arrow!">
+    
+     <div id="RunningTapeDisplay" aria-live="polite"><div id="TapeValues"><pre id="LeftTape" class="tape"></pre><div id="ActiveTapeArea"><pre id="ActiveTape" class="tape"> </pre><div id="MachineHead"><div class="HeadTop"></div><div class="HeadBody">Head</div></div></div><pre id="RightTape" class="tape"></pre></div></div>
+    </div> 
+   </div>
+
+   <div id="MachineMiddleSection">
+    <div id="MachineStatusMsgWrapper" aria-live="polite">
+      <pre id="MachineStatusMsgText">
+      </pre> 
+      <div id="MachineStatusMsgBg"></div>
+    </div>
+
+    <div id="MachineStateContainer" class="MachineStatusContainer" title="This is the Turing machine's current state" aria-live="polite">
+     <div class="BoxTitle">The Turing Machine's Current State iiiiis...</div>
+     <div id="MachineState" class="MachineStatusBox">
+ 
+     </div> 
+    </div> 
+
+    <div id="MachineStepsContainer" class="MachineStatusContainer" title="This is the number of steps executed by the machine since starting!" aria-live="polite">
+     <div class="BoxTitle"># of Steps issss....</div>
+     <div id="MachineSteps" class="MachineStatusBox">
+ 
+     </div> 
+    </div> 
+   </div> 
+   <div class="cleardiv"></div>
+
+   <div id="MachineLowerSection">
+    <div id="MachineLowerSection2">
+
+     <div id="MachineProgramContainer">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0vzzjjg-VTcVqZfxWHfD4yebYQT7AN6mFKA&usqp=CAU">
+      <div id="MachineProgramBlock">
+       <div id="MachineProgramBlock2">
+        <div id="SourceContainer">
+         <div id="SourceBackground">
+         </div>
+         <div id="tabackground">
+
+         </div>
+        </div>
+        <div id="SyntaxMsg"></div>
+       </div> 
+      </div> 
+     </div> 
+
+     <div id="MachineControlBlock">
+      <div class="BoxTitle">Da Controls!!</div>
+      <div id="MachineButtonsBlock">
+       <button id="RunButton" onclick="RunButton();" title="Start the machine running">Run!</button> 
+       <span title="If enabled, runs as fast as your browser &amp; computer allow">
+        <input type="checkbox" id="SpeedCheckbox" onclick="SpeedCheckbox();">Skip to result?
+       </span>
+
+       <br>
+       <button id="StopButton" onclick="StopButton();" disabled="disabled" title="Pause the machine when running">Pause It!</button><br> 
+       <button id="UndoButton" onclick="Undo();" title="Undo one machine step" style="float: right;">Undo</button>
+       <button id="StepButton" onclick="StepButton();" title="Run the machine for a single step and the pause">Next Step!</button><br> 
+       <button id="ResetButton" onclick="ResetButton();" title="Reset the machine and tape to the initial state">Reset!</button> 
+       <div id="InitialTapeDisplay"  title="This initial data will be loaded on the tape when the machine starts">
+        Input Line Here:<input type="text" id="InitialInput" value="" onchange="ShowResetMsg(true);">
+       </div>
+       <div style="font-size: small;">
+       </div>
+       <div id="AdvancedOptions" style="display: none; margin-top: 0.25em;">
+        <div id="InitialStateDisplay"  title="This is the state that the machine will start in" style="margin-bottom: 0.5em;">
+         Initial state:<input type="text" id="InitialState" value="0" onchange="ShowResetMsg(true);">
+        </div>
+         <div id="MachineVariantDescription" style="font-size: small; font-style: italic;"></div>
+         <span style="font-size: x-small;"><a href="javascript:" onclick="$('#AdvancedOptions').hide();">[Close]</a></span>
+        </div>
+       </div> 
+       <div id="ResetMessage">Changes will take effect when the machine is reset!!</div>
+       <br>
+       <br>
+    
+ </body>
+</html>
